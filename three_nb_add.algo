@@ -1,0 +1,22 @@
+ALGORITHM three_nb_add
+VAR
+  nv , nm , nc , j : INTEGER;
+  str : STRING
+
+BEGIN
+  Read(str);
+  nv:=0
+  nm:=1
+  FOR j FROM 0 TO str.lenght -1 STEP 1  DO
+    IF (str[j]=="e" or str[j]=="a" or str[j]=="i" or str[j]=="o" or str[j]=="u" or str[j]=="y" ) THEN
+       nv := nv + 1 
+    IF (str[j]=" " ) THEN
+        nm :=nm + 1
+    END_IF
+  END_FOR
+    nc = str.lenght
+ write("nbre de characteres est " , nc);
+ write ("nbre de mots est", nm);
+ write ("nbre de voyelles est" , nv);
+   
+END
